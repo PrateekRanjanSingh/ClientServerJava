@@ -2,16 +2,14 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.io.BufferedReader;
 import java.io.DataInputStream;
-import java.io.DataOutputStream;
 
-public class Server
+public class Server2
 {
    public static void main(String args[]) throws Exception
    {
-     ServerSocket sersock = new ServerSocket(5000); 
+     ServerSocket sersock = new ServerSocket(5001); 
      System.out.println("server is ready");  //  message to know the server is running
      while(true)
      {
@@ -24,11 +22,7 @@ public class Server
       {
         System.out.println(ar[i]);
       }
-      OutputStream ostream = sock.getOutputStream();                 
-        DataOutputStream dos = new DataOutputStream(ostream);
-        dos.writeBytes("Hello Client Bhaisaab!!");
-        dos.close();                            
-        ostream.close();   
+      System.out.println(ar);
      }                                                                                           
      //dstream .close(); istream.close(); sock.close(); sersock.close();
   }
