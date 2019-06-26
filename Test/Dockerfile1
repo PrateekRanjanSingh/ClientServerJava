@@ -1,0 +1,13 @@
+FROM openjdk
+
+MAINTAINER Prateek Ranjan Singh
+
+WORKDIR /code
+
+COPY client.java .
+
+RUN javac client.java
+
+EXPOSE 5000
+
+CMD java client

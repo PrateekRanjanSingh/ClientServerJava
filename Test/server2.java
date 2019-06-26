@@ -1,15 +1,15 @@
 import java.net.*;  
 import java.io.*;  
-class server{  
+class server2{  
 public static void main(String args[])throws Exception{  
-ServerSocket ss=new ServerSocket(5000);  
+ServerSocket ss=new ServerSocket(5001);
 
-while(true)
+while (true)
 {
     Socket s=ss.accept();  
     DataInputStream din=new DataInputStream(s.getInputStream());  
     DataOutputStream dout=new DataOutputStream(s.getOutputStream());  
-    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));  
+    BufferedReader br=new BufferedReader(new InputStreamReader(System.in));  
     String str ="",str2="";
     str = din.readUTF();
     System.out.println(str);
@@ -21,11 +21,10 @@ while(true)
     str2 = "" + a;
     dout.writeUTF(str2);
     // dout.flush();
-    // din.close();  
+    // din.close(); 
     // s.close();  
     // ss.close(); 
-}
-
+} 
 }}
 
 // String str="",str2="";  

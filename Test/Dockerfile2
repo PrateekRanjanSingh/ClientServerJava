@@ -1,0 +1,13 @@
+FROM openjdk
+
+MAINTAINER Prateek Ranjan Singh
+
+WORKDIR /code
+
+COPY server.java .
+
+RUN javac server.java
+
+EXPOSE 5000
+
+CMD java server
