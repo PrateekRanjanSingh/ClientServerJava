@@ -26,7 +26,7 @@ for (int i = 0; i < 240; i++) {
 count nn = new count();
 Thread t1 = new Thread(()->{
 	try {
-		Socket s=new Socket("server",5000);  
+		Socket s= new Socket("server",5000);  
 		DataInputStream din=new DataInputStream(s.getInputStream());  
 		DataOutputStream dout=new DataOutputStream(s.getOutputStream());  
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in)); 

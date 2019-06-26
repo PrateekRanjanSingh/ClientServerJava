@@ -1,0 +1,29 @@
+version: '3'
+services:
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile1
+    ports:
+      - "6000:5000"
+    image: clientcompose
+    container_name: client_cnt
+    depends_on:
+      - server
+      - server2
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile2
+    ports:
+      - "5000:5000"
+    image: server1
+    container_name: server
+  server2:
+    build:
+      context: .
+      dockerfile: Dockerfile3
+    ports:
+      - "5001:5001"
+    image: server2
+    container_name: server2
